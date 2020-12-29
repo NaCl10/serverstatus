@@ -15,10 +15,10 @@ if path.isfile('config.ini'):
     config.read('config.ini')
 else:
     # If the config file doesn't exist, create it
-    config['config'] = {'status': "echo 'R'; while true; do echo 'E'; done",
-            'token': '',
-            'error_message': '{address} appears to have gone down!',
-            'success_message': '{address} appears to have come back up. Phew!'}
+    config['config'] = {'token': '',
+            'status': "echo 'R'; while true; do echo 'E'; done",
+            'success_message': '{address} appears to have come back up. Phew!',
+            'error_message': '{address} appears to have gone down!'}
     config['servers'] = {}
     config['channels'] = {}
     with open('config.ini', 'w') as configfile:
